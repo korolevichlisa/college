@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" type="image/x-icon" href="{% static 'img/favicon.ico' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/styless2.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw==" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <title>Одеський технічний фаховий коледж</title>
+</head>
+<body>
+   
+    <main class="main">
+        
+    <section class="main_nav">
+        
+        <h1 class="title"><span class="title_main">Бібліотека</span> <p>Одеського  технічного фахового коледжу</p></h1>
+        <div class="main_nav1">
+            <div class="item_li"><a href="#news">Новини</a></div> 
+            <div class="item_li"><a href="#co-worker">Працівники (фото  та коротка інформація про них)</a></div>
+            <div class="item_li"><a href="#">Фонд бібліотеки</a></div>
+            <div class="item_li"><a href="#">Приміщення бібліотеки</a></div>
+            <div class="item_li"><a href="#">Послуги бібліотеки</a></div>
+            <div class="item_li"><a href="#">Виставки</a></div>
+            <div class="item_li"><a href="#">Контакти бібліотеки</a></div>
+            <div  class="main_img"><img src="../static/img/tfk2.svg" alt="" class="img_tfk"></div>
+        </div>
+        
+    </section>
+       
+    <section id="news">
+        <h1 class="title"><span class="title_main">Бібліотека</span> <p>Одеського  технічного фахового коледжу</p></h1>
+        <h1 class="new_title">Новини</h1>
+        <div class="scroll_news">
+          {% for post in news %}
+          <div>
+            <!-- <p>published: {{ post.published_date }}</p> -->
+            <!-- <h1 class="news_title">{{ post.title }}</a></h1>
+            <p class="news_text">{{ post.text|linebreaksbr }}</p> -->
+        </div>
+          {% endfor %}
+        </div>
+    </section>
+    <section id="co-worker">
+        <div class="title_box"><h1 class="worker_title">Працівники (фото  та коротка інформація про них)</h1></div>
+        <div class="scroll_worker">
+          {% for post in news %}
+          <div>
+            <!-- <h1 class="coworker_title">{{ post.title }}</a></h1>
+            <p class="coworker_text">{{ post.text }}</p> -->
+        </div>
+          {% endfor %}
+        </div>
+    </section>
+    <section id=""></section>
+    <section id=""></section>
+    <section class=""></section>
+    <section class=""></section>
+</main>
+</body>
+</html>

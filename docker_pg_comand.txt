@@ -1,0 +1,3 @@
+sudo systemctl start docker
+sudo docker run --rm --name local-postgres -p 5432:5432 -v "$PWD/pg_data/":/var/ -e POSTGRES_PASSWORD=mysecretpassword -d postgres
+sudo docker exec -it local-postgres bash
