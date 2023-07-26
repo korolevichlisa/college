@@ -120,7 +120,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-ALLOWED_HOSTS = ['0.0.0.0', 'tiny-pillows-hear.loca.lt']
+ALLOWED_HOSTS = ['0.0.0.0', 'tiny-pillows-hear.loca.lt', '127.0.0.1', 'localhost']
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/

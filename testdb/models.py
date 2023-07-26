@@ -2,7 +2,7 @@
 # from turtle import title
 
 from distutils.command.upload import upload
-from turtle import title
+# from turtle import title
 from django.template.defaultfilters import slugify
 import os
 

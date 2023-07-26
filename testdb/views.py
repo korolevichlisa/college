@@ -23,15 +23,15 @@ from testdb.models import College, New, Library_funds, Library_room, Library_ser
 #     exhibition = Exhibition.objects.filter(id_college__name_college = 'Одеський технічний фаховий коледж').values()
 #     # return render(ListView, "tfk.html",{'news':news, 'coworker':coworker, 'fund':fund, 'room':room, 'servic':servivic, 'exhibition':exhibition})
 def home(request):
-    coworker = Coworkers.objects.filter(id_college__name_college = 'Одеський технічний фаховий коледж')
-    return render(request, "index.html", {'coworker':coworker})
+    # coworker = Coworkers.objects.filter(id_college__name_college = 'Одеський технічний фаховий коледж')
+    return render(request, "index.html")
 
 def tfk(request):
     news = New.objects.filter(id_college__name_college = 'Одеський технічний фаховий коледж').order_by('-published_date')[:3:-1] 
     coworker = Coworkers.objects.filter(id_college__name_college = 'Одеський технічний фаховий коледж')
     fund = Library_funds.objects.filter(id_college__name_college = 'Одеський технічний фаховий коледж')
     room = Library_room.objects.filter(id_college__name_college = 'Одеський технічний фаховий коледж')
-    post = get_object_or_404(Library_room)
+    post = get_object_or_404(room)
     photos = Photos.objects.filter(post = post)
     servivic = Library_servic.objects.filter(id_college__name_college = 'Одеський технічний фаховий коледж')
     exhibition = Exhibition.objects.filter(id_college__name_college = 'Одеський технічний фаховий коледж')
